@@ -240,10 +240,18 @@
 
             return;
         },
+        handleEnterPress: function (e) {
+
+            if (e.keyCode == 13) {
+                this.handleSubmit();
+
+                return false;
+            }
+        },
         render: function () {
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Enter note" ref="note" />
+                    <input type="text" onKeyPress={this.handleEnterPress} placeholder="Enter note" ref="note" />
                     <input type="submit" style={{position: 'absolute', left: '-9999px'}} />
                 </form>
             );
