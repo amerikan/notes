@@ -244,6 +244,7 @@
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Enter note" ref="note" />
+                    <input type="submit" style="position: absolute; left: -9999px"/>
                 </form>
             );
         }
