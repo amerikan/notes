@@ -214,7 +214,7 @@
             return (
                 <form style={{display:'none'}} className="updateNoteForm" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Update note" ref="note" onChange={this.handleChange} onBlur={this.handleBlur} value={this.state.value} />
-                    <input type="submit" style="position: absolute; left: -9999px"/>
+                    <input type="submit" style={{position: 'absolute', left: '-9999px'}} />
                 </form>
             );
         }
@@ -244,7 +244,7 @@
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Enter note" ref="note" />
-                    <input type="submit" style="position: absolute; left: -9999px"/>
+                    <input type="submit" style={{position: 'absolute', left: '-9999px'}} />
                 </form>
             );
         }
