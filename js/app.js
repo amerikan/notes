@@ -251,7 +251,7 @@
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
                     <input type="text" onKeyPress={this.handleEnterPress} placeholder="Enter note" ref="note" />
-                    <input type="submit" value="Go" />
+                    <button type="submit">Go</button>
                 </form>
             );
         }
