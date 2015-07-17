@@ -152,6 +152,9 @@
             React.findDOMNode(this.refs.title).style.display = 'none';
             React.findDOMNode(this.refs.updateForm).style.display = '';
 
+            // Hide buttons
+            React.findDOMNode(this.refs.buttonGroup).style.display = 'none';
+
             // Select all text
             React.findDOMNode(this.refs.updateForm).childNodes[0].select();
         },
@@ -170,7 +173,7 @@
 
                     <UpdateNoteForm ref="updateForm" onNoteUpdateSubmit={this.handleUpdate} title={this.props.title} onUpdateFormBlur={this.handleBlur} />
 
-                    <div className="button-group">
+                    <div ref="buttonGroup" className="button-group">
                         <button className="edit-button" onClick={this.handleEditClick}>Edit</button>
                         <button className="delete-button" onClick={this.handleDelete} title="Delete">X</button>
                     </div>
