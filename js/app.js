@@ -227,8 +227,6 @@
             // Get value and trim it
             var note = React.findDOMNode(this.refs.note).value.trim();
 
-            alert('submitted ->' + note);
-
             if (!note) {
                 return;
             }
