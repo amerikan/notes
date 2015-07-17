@@ -253,7 +253,7 @@
         render: function () {
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Enter note" ref="note" />
+                    <input type="text" placeholder="Enter new note and press <return> to save" ref="note" />
                 </form>
             );
         }
