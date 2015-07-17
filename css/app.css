@@ -35,7 +35,6 @@ body {
   padding: 20px 15px;
 }
 .noteBox .noteList li.note .button-group {
-  display: none;
   position: absolute;
   right: -1px;
   top: -1px;
@@ -51,13 +50,9 @@ body {
 }
 .noteBox .noteList li.note .button-group .delete-button {
   background: #C0392B;
-  font-weight: bold;
 }
 .noteBox .noteList li.note:hover {
   background: #f5f5f5;
-}
-.noteBox .noteList li.note:hover .button-group {
-  display: block;
 }
 .noteBox .noteList li.note .updateNoteForm input[type="text"] {
   background: #FFFFCC;

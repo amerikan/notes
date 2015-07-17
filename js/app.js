@@ -166,20 +166,24 @@
             React.findDOMNode(this.refs.updateForm).style.display = 'none';
             React.findDOMNode(this.refs.title).style.display = '';
         },
-        handleHover: function () {
+        handleHoverIn: function () {
             // Show button group on hover
             React.findDOMNode(this.refs.buttonGroup).style.display = '';
         },
+        handleHoverOut: function () {
+            // Hide button group on leave
+            React.findDOMNode(this.refs.buttonGroup).style.display = 'none';
+        },
         render: function () {
             return (
-                <li className="note" onMouseEnter={this.handleHover} onTouchStart={this.handleHover}>
+                <li className="note" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut} onTouchEnd={this.handleHoverIn}>
                     <div className="note-title" ref="title">{this.props.title}</div>
 
                     <UpdateNoteForm ref="updateForm" onNoteUpdateSubmit={this.handleUpdate} title={this.props.title} onUpdateFormBlur={this.handleBlur} />
 
-                    <div ref="buttonGroup" className="button-group">
+                    <div ref="buttonGroup" className="button-group" style={{display: 'none'}}>
                         <button className="edit-button" onClick={this.handleEditClick}>Edit</button>
-                        <button className="delete-button" onClick={this.handleDelete} title="Delete">X</button>
+                        <button className="delete-button" onClick={this.handleDelete}>Delete</button>
                     </div>
                 </li>
             );
