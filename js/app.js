@@ -252,7 +252,7 @@
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
                     <input type="text" onKeyPress={this.handleEnterPress} placeholder="Enter note" ref="note" />
-                    <input type="submit" style={{position: 'absolute', left: '-9999px'}} />
+                    <input type="submit" style={{display: 'none'}} tabindex="-1"/>
                 </form>
             );
         }
