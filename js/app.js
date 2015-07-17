@@ -241,19 +241,10 @@
 
             return;
         },
-        handleEnterPress: function (e) {
-
-            if (e.keyCode == 13) {
-                this.handleSubmit();
-
-                return false;
-            }
-        },
         render: function () {
             return (
                 <form className="noteForm" onSubmit={this.handleSubmit}>
-                    <input type="text" onKeyPress={this.handleEnterPress} placeholder="Enter note" ref="note" />
-                    <button type="submit">Go</button>
+                    <input type="text" placeholder="Enter note" ref="note" />
                 </form>
             );
         }
