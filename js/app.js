@@ -166,9 +166,13 @@
             React.findDOMNode(this.refs.updateForm).style.display = 'none';
             React.findDOMNode(this.refs.title).style.display = '';
         },
+        handleHover: function () {
+            // Show button group on hover
+            React.findDOMNode(this.refs.buttonGroup).style.display = '';
+        },
         render: function () {
             return (
-                <li className="note">
+                <li className="note" onMouseEnter={this.handleHover}>
                     <div className="note-title" ref="title">{this.props.title}</div>
 
                     <UpdateNoteForm ref="updateForm" onNoteUpdateSubmit={this.handleUpdate} title={this.props.title} onUpdateFormBlur={this.handleBlur} />
