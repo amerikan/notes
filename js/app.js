@@ -172,7 +172,7 @@
         },
         render: function () {
             return (
-                <li className="note" onMouseEnter={this.handleHover}>
+                <li className="note" onMouseEnter={this.handleHover} onTouchStart={this.handleHover}>
                     <div className="note-title" ref="title">{this.props.title}</div>
 
                     <UpdateNoteForm ref="updateForm" onNoteUpdateSubmit={this.handleUpdate} title={this.props.title} onUpdateFormBlur={this.handleBlur} />
