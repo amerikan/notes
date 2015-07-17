@@ -217,14 +217,10 @@
               value: evt.target.value
             });
         },
-        handleBlur: function () {
-            // Parent callback
-            this.props.onUpdateFormBlur();
-        },
         render: function () {
             return (
-                <form style={{display:'none'}} className="updateNoteForm" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Update note" ref="note" onChange={this.handleChange} onBlur={this.handleBlur} value={this.state.value} />
+                <form style={{display:'none'}} ref="updateNoteForm" className="updateNoteForm" onSubmit={this.handleSubmit}>
+                    <input type="text" placeholder="Update note" ref="note" onChange={this.handleChange} onBlur={this.handleSubmit} value={this.state.value} />
                 </form>
             );
         }
